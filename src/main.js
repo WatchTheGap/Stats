@@ -5,21 +5,35 @@ let promise = fetch(
 
   { method: "GET",
     headers: {
-    Authorization: "token " + process.argv[3]
+    authorization: "token " + process.argv[3],
     }
   });
+
+let stars = 0;
+let maxStars = 0;
 
 promise.then(function handler(response) {
   console.log(response.status);
   if (response.status > 199 && response.status < 300) {
     response.json().then(function printData(data) {
-      // console.log(data.name, data.location);
-      // console.log(data, data.stargazers_count);
-      //
+      // console.log(data.name, data.location); //<---keep for question 1
+      // console.log(data[0]);
       console.log(data.length);
-      console.log(data[0].stargazers_count);
-      return;
-    });
+
+      data.forEach(function countStars(each) {
+        let starCount = new Number(each.stargazers_count);
+        stars = stars + starCount;
+        if (starCount >= maxStars)  {
+          maxStars = starCount;
+        }
+        console.log(maxStars);
+        console.log(data.indexOf(maxStars));
+
+        console.log(starCount);
+        console.log(stars);
+        });
+      });
+
   } else {
     console.log("Insert Problem Here", response.status);
   }
