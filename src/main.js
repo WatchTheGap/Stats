@@ -25,9 +25,10 @@ promise.then(function handler(response) {
         stars = stars + starCount;
         if (starCount >= maxStars)  {
           maxStars = starCount;
+        console.log(each.name, starCount);
         }
         console.log(maxStars);
-        console.log(data.indexOf(maxStars));
+        // console.log(data.indexOf(maxStars));
 
         console.log(starCount);
         console.log(stars);
