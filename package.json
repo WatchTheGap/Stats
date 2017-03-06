@@ -1,0 +1,29 @@
+{
+  "name": "stats",
+  "version": "1.0.0",
+  "description": "week4day1hw",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WatchTheGap/Stats.git"
+  },
+  "keywords": [
+    "stats",
+    "fetch",
+    "github",
+    "promise",
+    "homework"
+  ],
+  "author": "Sara Basile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WatchTheGap/Stats/issues"
+  },
+  "homepage": "https://github.com/WatchTheGap/Stats#readme",
+  "dependencies": {
+    "node-fetch": "^1.6.3"
+  }
+}
